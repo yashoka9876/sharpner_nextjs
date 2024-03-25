@@ -68,7 +68,7 @@ export async function getStaticProps(){
 
       client.close();
 
-      
+      //htis
       
     return {
         props:{
