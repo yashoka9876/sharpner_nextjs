@@ -8,6 +8,8 @@
   padding: 0 10%;
 }
 
+/* Media query for screens smaller than 600px */
+
 .logo {
   font-size: 2rem;
   color: white;
@@ -22,6 +24,13 @@
   align-items: baseline;
 }
 
+@media (max-width: 500px) {
+  .header ul{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .header li {
   margin-left: 3rem;
 }
@@ -31,7 +40,23 @@
   font-size: 1.5rem;
   color: #fcb8d2;
 }
+@media (max-width: 600px) {
+  .header a{
+    font-size: 0.9rem;
+  }
+  .header .firstLi{
+    border-bottom: 3px solid white;
+  }
+}
 
+@media (max-width: 396px) {
+  .header a{
+    font-size: 0.5rem;
+  }
+  .header .firstLi{
+    border-bottom: 3px solid white;
+  }
+}
 .header a:hover,
 .header a:active,
 .header a.active {

@@ -7,8 +7,8 @@ function MainNavigation() {
     <header className={classes.header}>
       <div className={classes.logo}>React Meetups</div>
       <nav>
-        <ul>
-          <li>
+        <ul>  
+          <li className={classes.firstLi}>
             <Link href='/'>All Meetups</Link>
           </li>
           <li>
