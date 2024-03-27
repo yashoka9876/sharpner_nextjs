@@ -2,43 +2,7 @@ import React from 'react'
 import MeetupList from '../components/meetups/MeetupList';
 import { MongoClient } from 'mongodb';
 import Head from 'next/head';
-const DUMMY_MEETUPS=[
-    {
-      id:'m1',
-      title:'Ashoka',
-      image:'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600',
-      address:'vpo lidhran jalandhar',
-      description:'this is my first meetups'
-    },
-    {
-      id:'m2',
-      title:'Nitish',
-      image:'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600',
-      address:'vpo lidhran jalandhar',
-      description:'this is my first meetups'
-    },
-    {
-      id:'m3',
-      title:'Sameer',
-      image:'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600',
-      address:'vpo lidhran jalandhar',
-      description:'this is my first meetups'
-    },
-    {
-      id:'m4',
-      title:'Preet',
-      image:'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600',
-      address:'vpo lidhran jalandhar',
-      description:'this is my first meetups'
-    },
-    {
-      id:'m5',
-      title:'Mahesh',
-      image:'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600',
-      address:'vpo lidhran jalandhar',
-      description:'this is my first meetups'
-    },
-  ]
+
 const HomePage = (props) => {
   return (
     <>
@@ -53,7 +17,7 @@ const HomePage = (props) => {
   )
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   //fetch data from an API
   const url='mongodb+srv://yashoka51:WUy6Be5gRxGPWV1z@cluster0.ndzb68f.mongodb.net/'
   // 'mongodb+srv://yashoka51:WUy6Be5gRxGPWV1z@cluster0.ndzb68f.mongodb.net/meeetups?retryWrites=true&w=majority&appName=Cluster0'
@@ -79,7 +43,7 @@ export async function getStaticProps(){
               id:item._id.toString()
             }))
         },
-        revalidate:1
+        
     };
 }
 

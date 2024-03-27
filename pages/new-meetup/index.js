@@ -26,7 +26,7 @@ const newMeetupPage = () => {
   return <>
      <Head>
           <title>React Meetup</title>
-        </Head>
+      </Head>
         <meta name='description'
         content='Add your own meetup and create amzing networking opportunity!'
         />
